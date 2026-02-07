@@ -1,20 +1,30 @@
 # metaclaw-registry
 
-Registry backend for publishing and distributing MetaClaw artifacts.
+Publish/distribution backend for MetaClaw artifacts.
 
-## Scope
+## Repository Boundary
 
-- Stores metadata for `skill` and `capsule` artifacts.
-- Tracks OCI reference + digest for each version.
-- Verifies optional Ed25519 signatures on publish.
-- Provides list/get APIs.
-- Supports bearer-token auth for write APIs.
+This repo is the registry service backend only.
+
+- includes: registry API, metadata index, signature/digest verification, auth, search/list/download policy
+- excludes: engine compiler/runtime logic, concrete business bots, example projects
+
+## Artifact Model
+
+Registry records metadata for `skill` and `capsule` artifacts:
+
+- `kind`, `name`, `version`
+- `digest` (immutable content identity)
+- `ociRef` (where artifact is stored, for example `ghcr.io/...`)
+- optional signature metadata
+
+Note: artifact binaries/images are stored in OCI registry; this repo stores service/API + metadata index.
 
 ## API
 
 - `GET /healthz`
 - `POST /v1/artifacts`
-- `GET /v1/artifacts?kind=skill&name=obsidian`
+- `GET /v1/artifacts?kind=skill&name=obsidian.search`
 - `GET /v1/artifacts/{kind}/{name}/{version}`
 
 ## Run
@@ -43,3 +53,9 @@ curl -X POST http://localhost:8088/v1/artifacts \
 ```bash
 go test ./...
 ```
+
+## Related Repos
+
+- engine: https://github.com/fpp-125/metaclaw
+- skills: https://github.com/fpp-125/metaclaw-skills
+- examples: https://github.com/fpp-125/metaclaw-examples
