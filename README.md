@@ -9,6 +9,15 @@ This repo is the registry service backend only.
 - includes: registry API, metadata index, signature/digest verification, auth, search/list/download policy
 - excludes: engine compiler/runtime logic, concrete business bots, example projects
 
+## Ecosystem Repo Map
+
+| Repo | Primary Responsibility | URL |
+| --- | --- | --- |
+| `metaclaw` | Engine core: compiler, runtime adapters, lifecycle/state | https://github.com/fpp-125/metaclaw |
+| `metaclaw-examples` | Runnable end-to-end examples and starter templates | https://github.com/fpp-125/metaclaw-examples |
+| `metaclaw-skills` | Reusable capabilities (`SKILL.md` + `capability.contract`) | https://github.com/fpp-125/metaclaw-skills |
+| `metaclaw-registry` | Publish/distribution backend for skill/capsule metadata | https://github.com/fpp-125/metaclaw-registry |
+
 ## Artifact Model
 
 Registry records metadata for `skill` and `capsule` artifacts:
