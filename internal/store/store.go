@@ -1,6 +1,6 @@
 package store
 
-import "github.com/metaclaw/metaclaw-registry/internal/model"
+import "github.com/fpp-125/metaclaw-registry/internal/model"
 
 type Store interface {
 	Upsert(a model.Artifact) error

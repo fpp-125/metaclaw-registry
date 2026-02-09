@@ -47,8 +47,11 @@ go run ./cmd/metaclaw-registry --addr :8088 --data ./data/registry.json --admin-
 ## Publish Example
 
 ```bash
+ADMIN_TOKEN=dev-token
+AUTH_SCHEME=Bearer
+
 curl -X POST http://localhost:8088/v1/artifacts \
-  -H 'Authorization: Bearer dev-token' \
+  -H "Authorization: ${AUTH_SCHEME} ${ADMIN_TOKEN}" \
   -H 'Content-Type: application/json' \
   -d '{
     "kind":"skill",

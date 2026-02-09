@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/metaclaw/metaclaw-registry/internal/model"
-	"github.com/metaclaw/metaclaw-registry/internal/store"
+	"github.com/fpp-125/metaclaw-registry/internal/model"
+	"github.com/fpp-125/metaclaw-registry/internal/store"
 )
 
 type Service struct {

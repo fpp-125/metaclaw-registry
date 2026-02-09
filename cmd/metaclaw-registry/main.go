@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/metaclaw/metaclaw-registry/internal/httpapi"
-	"github.com/metaclaw/metaclaw-registry/internal/service"
-	"github.com/metaclaw/metaclaw-registry/internal/store"
+	"github.com/fpp-125/metaclaw-registry/internal/httpapi"
+	"github.com/fpp-125/metaclaw-registry/internal/service"
+	"github.com/fpp-125/metaclaw-registry/internal/store"
 )
 
 func main() {

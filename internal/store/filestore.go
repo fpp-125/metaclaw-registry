@@ -8,7 +8,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/metaclaw/metaclaw-registry/internal/model"
+	"github.com/fpp-125/metaclaw-registry/internal/model"
 )
 
 type FileStore struct {
